@@ -79,7 +79,7 @@
                                 <i class='bx bx-plus'></i>
                             </span>
                         </div>
-                        <form method="post" action="./functions/ordercode.php">
+                        <form method="get" action="#">
                             <input type="hidden" name="product_id" value="<?= $product['id'] ?>">
                             <input type="hidden" name="quantity" id="quantity" value="1">
                             <input type="hidden" name="order" value="true">
@@ -95,7 +95,7 @@
                                     </a>
                             <?php 
                                 }else{
-                                    echo '<button class="btn-flat btn-hover">Thêm vào giỏi hàng</button>';
+                                    echo '<button type="button" class="btn-flat btn-hover">Thêm vào giỏi hàng</button>';
                                 }
                             } 
                             ?>
@@ -111,46 +111,6 @@
                         <p>
                             <?= nl2br($product['description']) ?>
                         </p>
-                </div>
-            </div>
-            <div class="box">
-                <div class="box-header">
-                    Đánh giá
-                </div>
-                <div>
-                    <?php
-                        $rates = getRate($product['id']);
-                        if (mysqli_num_rows($rates) > 0){
-                        foreach ($rates as $rate) {
-                    ?>
-                        <div class="user-rate">
-                            <div class="user-info">
-                                <div class="user-avt">
-                                    <img src="./images/avatar.jpg" alt="">
-                                </div>
-                                <div class="user-name">
-                                    <span class="name"><?= $rate['name'] ?></span>
-                                    <span class="rating">
-                                        <?php  
-                                            for($i=0 ; $i<$rate['rate'] ; $i++){
-                                                echo "<i class='bx bxs-star'></i>";
-                                            }
-                                        ?>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="user-rate-content">
-                                <?= $rate['comment'] ?>
-                            </div>
-                        </div>
-                    <?php 
-                        }}else{
-                    ?>
-                        <div class="user-rate-content">
-                            Chưa có lượt bình luận hoặc đánh giá nào
-                        </div>
-                    <?php } ?>
-                    
                 </div>
             </div>
         </div>

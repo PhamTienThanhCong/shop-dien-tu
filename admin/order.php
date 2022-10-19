@@ -40,53 +40,105 @@ $orders = getAllOrder($type);
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    
-                                <?php 
-                                foreach($orders as $order)
-                                { 
-                                ?>
                                     <tr>
                                         <td>
-                                            <p class="text-xs font-weight-bold mb-0">&nbsp &nbsp #<?= $order['id'] ?></p>
+                                            <p class="text-xs font-weight-bold mb-0">&nbsp &nbsp #1</p>
                                         </td>
                                         <td>
                                             <div class="d-flex px-2 py-1">
                                                 <div class="d-flex flex-column justify-content-center">
-                                                    <h6 class="mb-0 text-sm"><?= $order['name'] ?></h6>
-                                                    <p class="text-xs text-secondary mb-0"><?= $order['email'] ?></p>
+                                                    <h6 class="mb-0 text-sm">Nguyễn Trần Tiến</h6>
+                                                    <p class="text-xs text-secondary mb-0">trantien@gmail.com</p>
                                                 </div>
                                             </div>
                                         </td>
                                         <td>
                                             <p class="text-xs font-weight-bold mb-0">
-                                                <a href="./order-detail.php?id_order=<?= $order['id'] ?>">View now</a>
+                                                <a href="#">View now</a>
                                             </p>
-                                            <p class="text-xs text-secondary mb-0">Quantity: <?= $order['quantity'] ?></p>
+                                            <p class="text-xs text-secondary mb-0">Quantity: 12</p>
                                         </td>
                                         <td>
-                                            <p class="text-xs font-weight-bold mb-0"><?= $order['address'] ?></p>
-                                            <p class="text-xs text-secondary mb-0"><?= $order['phone'] ?></p>
+                                            <p class="text-xs font-weight-bold mb-0">Địa chỉ ở đâu đó</p>
+                                            <p class="text-xs text-secondary mb-0">0976642312</p>
                                         </td>
                                         <td class="align-middle text-center text-sm">
-                                            <?php  
-                                                if ($order['status'] == 2){
-                                                    echo '<span class="badge badge-sm bg-gradient-primary">Booked</span>';
-                                                }else if ($order['status'] == 3){
-                                                    echo '<span class="badge badge-sm bg-gradient-info">Delivering</span>';
-                                                }else if ($order['status'] == 4){
-                                                    echo '<span class="badge badge-sm bg-gradient-success">Success</span>';
-                                                }
-                                            ?>
+                                            <span class="badge badge-sm bg-gradient-success">Success</span>
+                                            <!-- <span class="badge badge-sm bg-gradient-primary">Booked</span>
+                                            <span class="badge badge-sm bg-gradient-info">Delivering</span> -->
                                         </td>
                                         <td class="align-middle text-center">
                                             <span class="text-secondary text-xs font-weight-bold">
-                                                <?= date('d-m-Y', strtotime($order['created_at'])); ?>
+                                                08-01-2022
                                             </span>
                                         </td>
                                     </tr>
-                                <?php 
-                                } 
-                                ?> 
+                                    <tr>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">&nbsp &nbsp #1</p>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex px-2 py-1">
+                                                <div class="d-flex flex-column justify-content-center">
+                                                    <h6 class="mb-0 text-sm">Nguyễn Trần Tiến</h6>
+                                                    <p class="text-xs text-secondary mb-0">trantien@gmail.com</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">
+                                                <a href="#">View now</a>
+                                            </p>
+                                            <p class="text-xs text-secondary mb-0">Quantity: 12</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">Địa chỉ ở đâu đó</p>
+                                            <p class="text-xs text-secondary mb-0">0976642312</p>
+                                        </td>
+                                        <td class="align-middle text-center text-sm">
+                                            <span class="badge badge-sm bg-gradient-success">Success</span>
+                                            <!-- <span class="badge badge-sm bg-gradient-primary">Booked</span>
+                                            <span class="badge badge-sm bg-gradient-info">Delivering</span> -->
+                                        </td>
+                                        <td class="align-middle text-center">
+                                            <span class="text-secondary text-xs font-weight-bold">
+                                                08-01-2022
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">&nbsp &nbsp #1</p>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex px-2 py-1">
+                                                <div class="d-flex flex-column justify-content-center">
+                                                    <h6 class="mb-0 text-sm">Nguyễn Trần Tiến</h6>
+                                                    <p class="text-xs text-secondary mb-0">trantien@gmail.com</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">
+                                                <a href="#">View now</a>
+                                            </p>
+                                            <p class="text-xs text-secondary mb-0">Quantity: 12</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">Địa chỉ ở đâu đó</p>
+                                            <p class="text-xs text-secondary mb-0">0976642312</p>
+                                        </td>
+                                        <td class="align-middle text-center text-sm">
+                                            <span class="badge badge-sm bg-gradient-success">Success</span>
+                                            <!-- <span class="badge badge-sm bg-gradient-primary">Booked</span>
+                                            <span class="badge badge-sm bg-gradient-info">Delivering</span> -->
+                                        </td>
+                                        <td class="align-middle text-center">
+                                            <span class="text-secondary text-xs font-weight-bold">
+                                                08-01-2022
+                                            </span>
+                                        </td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>

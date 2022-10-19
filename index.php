@@ -1,7 +1,7 @@
 <?php 
 include("./includes/header.php");
 
-$bestSellingProducts    =   getBestSelling(8);
+$bestSellingProducts    =   getLatestProducts(8);
 $LatestProducts         =   getLatestProducts(8);
 $blogs                  =   getBlogs($page, $search);
 ?>
@@ -214,64 +214,7 @@ $blogs                  =   getBlogs($page, $search);
     </div>
     <!-- end product list -->
 
-    <!-- blogs -->
-    <div class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Bài viết mới nhất</h2>
-            </div>
-            <?php
-                $count = 0; 
-                foreach($blogs as $blog) { 
-                if ($count == 2){
-                    break;
-                }
-            ?>
-            <?php if ($count == 0) { ?>
-                <div class="blog">
-                    <div class="blog-img">
-                        <img src="./images/<?= $blog['img'] ?>" alt="">
-                    </div>
-                    <div class="blog-info">
-                        <div class="blog-title">
-                            <?= $blog['title'] ?>
-                        </div>
-                        <div class="blog-preview">
-                            <?= $blog['small_content'] ?>
-                        </div>
-                        <a href="./blog-detail.php?slug=<?= $blog['slug'] ?>">
-                            <button class="btn-flat btn-hover">Đọc Thêm</button>
-                        </a>
-                    </div>
-                </div>
-            <?php } else { ?>
-                <div class="blog row-revere">
-                    <div class="blog-img">
-                        <img src="./images/<?= $blog['img'] ?>" alt="">
-                    </div>
-                    <div class="blog-info">
-                        <div class="blog-title">
-                            <?= $blog['title'] ?>
-                        </div>
-                        <div class="blog-preview">
-                            <?= $blog['small_content'] ?>
-                        </div>
-                        <a href="./blog-detail.php?slug=<?= $blog['slug'] ?>">
-                            <button class="btn-flat btn-hover">Đọc Thêm</button>
-                        </a>
-                    </div>
-                </div>
-            <?php
-                }
-                $count ++;
-            } 
-            ?>
-            <div class="section-footer">
-                <a href="./blog.php" class="btn-flat btn-hover">Xem tất cả</a>
-            </div>
-        </div>
-    </div>
-    <!-- end blogs -->
+    <!-- footer -->
     <?php include("./includes/footer.php") ?>
     <script src="./assets/js/app.js"></script>
     <script src="./assets/js/index.js"></script>

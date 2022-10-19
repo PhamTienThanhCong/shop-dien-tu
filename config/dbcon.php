@@ -2,7 +2,7 @@
     $host="localhost";
     $username= "root";
     $password="";
-    $database="atshop_db";
+    $database="shop_dien_tu";
 
     $conn=mysqli_connect($host, $username, $password, $database);
     mysqli_set_charset($conn,'utf8');

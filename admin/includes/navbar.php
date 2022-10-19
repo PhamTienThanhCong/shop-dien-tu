@@ -28,10 +28,6 @@ $page= substr($_SERVER['SCRIPT_NAME'], strripos($_SERVER['SCRIPT_NAME'],"/")+1);
                 {
                   echo "Add Product";
                 }
-                else if($page== "user.php")
-                {
-                  echo "User manage";
-                }
                 else if($page== "order.php")
                 {
                   echo "Order manage";

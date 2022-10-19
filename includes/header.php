@@ -50,10 +50,10 @@ $page = $page - 1;
                 <div class="top-header container">
                     <ul class="devided">
                         <li>
-                            <a href="#">+84988269496</a>
+                            <a href="#">+84987654321</a>
                         </li>
                         <li>
-                            <a href="#">cossoft@mail.com</a>
+                            <a href="#">shopdientu@mail.com</a>
                         </li>
                     </ul>                    
                 </div>
@@ -91,7 +91,7 @@ $page = $page - 1;
                                                     <h3>Xin chào <?= $_SESSION['auth_user']['name'] ?>!</h3>
                                                         <ul>   
                                                             <li><a href="user-profile.php">Trang cá nhân</a></li>
-                                                            <li><a href="./cart-status.php">Đơn hàng</a></li>
+                                                            <li><a href="#">Đơn hàng</a></li>
                                                             <li><a href="logout.php">Đăng Xuất</a></li>        
                                                         </ul>
                                                 </div>                                          
@@ -119,7 +119,7 @@ $page = $page - 1;
                             <?php
                             }
                             ?>
-                        <li><a href="./cart.php"><i class='bx bx-cart'></i></a></li>
+                        <li><a href="#"><i class='bx bx-cart'></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -160,7 +160,6 @@ $page = $page - 1;
                             </div>
                         </li>
                         <!-- end mega menu -->
-                        <li><a href="./blog.php">blog</a></li>
                         <li><a href="#">Liên lạc</a></li>
                     </ul>
                 </div>
