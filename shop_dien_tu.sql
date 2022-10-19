@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.3
+-- version 5.2.0-rc1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jun 20, 2022 at 12:51 PM
--- Server version: 10.4.22-MariaDB
--- PHP Version: 7.4.28
+-- Máy chủ: localhost:3306
+-- Thời gian đã tạo: Th10 19, 2022 lúc 11:47 AM
+-- Phiên bản máy phục vụ: 5.7.33
+-- Phiên bản PHP: 7.4.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,52 +18,27 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `cossoft_db`
+-- Cơ sở dữ liệu: `shop_dien_tu`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `blog`
---
-
-CREATE TABLE `blog` (
-  `id` int(11) NOT NULL,
-  `title` varchar(250) NOT NULL,
-  `slug` varchar(250) NOT NULL,
-  `img` varchar(100) NOT NULL,
-  `small_content` mediumtext DEFAULT NULL,
-  `content` longtext NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `blog`
---
-
-INSERT INTO `blog` (`id`, `title`, `slug`, `img`, `small_content`, `content`, `created_at`) VALUES
-(8, 'Những thông hữu ích về tai nghe bluetooth', 'nhung-thong-huu-ich-ve-tai-nghe-bluetooth-17-95', '1655226911.jpg', 'Tại triển lãm công nghệ lớn nhất thế giới CES trong 2 năm vừa qua, đã đánh dấu sự phát triển và bùng nổ mạnh mẽ của thế giới công nghệ. Một trong số đó, chúng ta không thể không thừa nhận sự “trỗi dậy” của các thiết bị âm thanh sử dụng công nghệ không dây. Đặc biệt là những chiếc tai nghe bluetooth với thiết kế nhỏ gọn, tiện dụng. Bài viết này, hãy cùng mình tìm hiểu thông tin và kinh nghiệm chọn mua dòng sản phẩm này.', '<h2 style=\"box-sizing: border-box; color: #555555; width: 772.5px; margin-top: 0px; margin-bottom: 0.5em; text-rendering: optimizespeed; font-size: 1.6em; line-height: 1.2; font-family: Angkor, sans-serif; background-color: #ffffff;\"><span style=\"box-sizing: border-box; font-weight: bolder;\">Tai nghe bluetooth l&agrave; g&igrave;?</span></h2>\r\n<p style=\"box-sizing: border-box; margin-bottom: 1.3em; margin-top: 0px; color: #777777; font-family: Angkor, sans-serif; background-color: #ffffff; line-height: 1.2;\"><span style=\"box-sizing: border-box;\"><a style=\"box-sizing: border-box; background-color: transparent; touch-action: manipulation; color: #334862; text-decoration-line: none;\" href=\"https://vi.wikipedia.org/wiki/Bluetooth\">Bluetooth</a>&nbsp;l&agrave; một kh&aacute;i niệm đ&atilde; trở n&ecirc;n kh&aacute; quen thuộc với nhiều người, đặc biệt l&agrave; c&aacute;c &ldquo;fan&rdquo; c&ocirc;ng nghệ. Tuy nhi&ecirc;n, đối với nhiều người th&igrave; tai nghe bluetooth lại l&agrave; một định nghĩa xa lạ. Để c&oacute; thể hiểu r&otilde; được cụm từ n&agrave;y, trước ti&ecirc;n bạn cần trang bị cho m&igrave;nh những kiến thức cần thiết về bluetooth.</span></p>\r\n<p style=\"box-sizing: border-box; margin-bottom: 1.3em; margin-top: 0px; color: #777777; font-family: Angkor, sans-serif; background-color: #ffffff; line-height: 1.2;\"><span style=\"box-sizing: border-box;\">Bluetooth l&agrave; t&ecirc;n gọi của một loại c&ocirc;ng nghiệp truyền th&ocirc;ng kh&ocirc;ng d&acirc;y, được sử dụng để kết nối giữa c&aacute;c thiết bị điện tử trong khoảng c&aacute;ch gần. Khi sử dụng c&ocirc;ng nghệ n&agrave;y, người d&ugrave;ng c&oacute; thể dễ d&agrave;ng kết nối giữ c&aacute;c thiết bị di động v&agrave; cố định. Từ đ&acirc;y, hỗ trợ rất nhiều trong c&ocirc;ng việc cũng như c&aacute;c c&ocirc;ng việc giải tr&iacute; kh&aacute;c nhau trong cuộc sống. Đặc trưng của c&ocirc;ng nghệ n&agrave;y, l&agrave; sử dụng s&oacute;ng Radio với tần số 2.4 GHZ. Nhờ vậy, gi&uacute;p người d&ugrave;ng sử dụng tối đa những chức năng của thiết bị cho c&ocirc;ng việc , với những hiệu quả chất lượng. Trải qua nhiều qu&aacute; tr&igrave;nh ph&aacute;t triển, cải tiến kh&aacute;c nhau, phi&ecirc;n bản cao cấp nhất hiện tại l&agrave; bluetooth 4.2. Đối với trang bị n&agrave;y, thường được t&iacute;ch hợp đối với những sản phẩm c&ocirc;ng nghệ đắt tiền tr&ecirc;n thị trường.</span></p>\r\n<p style=\"box-sizing: border-box; margin-bottom: 1.3em; margin-top: 0px; color: #777777; font-family: Angkor, sans-serif; background-color: #ffffff; line-height: 1.2;\"><span style=\"box-sizing: border-box;\">Tai nghe bluetooth hay c&ograve;n được gọi l&agrave; tai nghe kh&ocirc;ng d&acirc;y, l&agrave; d&ograve;ng thiết bị &ldquo;chơi nhạc&rdquo; đang được rất nhiều người d&ugrave;ng lựa chọn tr&ecirc;n thị trường. Ưu điểm h&agrave;ng đầu, l&agrave;m n&ecirc;n sức h&uacute;t cũng như t&ecirc;n gọi của n&oacute; so với những chiếc tai nghe d&acirc;y truyền thống nằm ở thiết kế tiện lợi, đẳng cấp. Thay v&igrave; sử dụng d&acirc;y nối rắc rối, thiếu thẩm mỹ th&igrave; d&ograve;ng tai nghe n&agrave;y đ&atilde; ho&agrave;n to&agrave;n loại bỏ đi nhược điểm đ&oacute;. C&ocirc;ng nghệ bluetooth đ&atilde; gi&uacute;p người mua dễ d&agrave;ng điều khiển, sử dụng thiết bị n&agrave;y một c&aacute;ch tốt nhất.</span></p>\r\n<p style=\"box-sizing: border-box; margin-bottom: 1.3em; margin-top: 0px; color: #777777; font-family: Angkor, sans-serif; background-color: #ffffff; line-height: 1.2;\">&nbsp;<img style=\"font-family: -apple-system, BlinkMacSystemFont, \'Segoe UI\', Roboto, Oxygen, Ubuntu, Cantarell, \'Open Sans\', \'Helvetica Neue\', sans-serif;\" src=\"https://loakeoxanh.com/wp-content/uploads/2018/05/tai-nghe-bluetooth-4.jpg\" alt=\"tai-nghe-bluetooth\" /></p>\r\n<p style=\"box-sizing: border-box; margin-bottom: 1.3em; margin-top: 0px; color: #777777; font-family: Angkor, sans-serif; background-color: #ffffff; line-height: 1.2;\">Nếu chưa trải nghiệm, chắc chắn bạn sẽ kh&ocirc;ng thể đ&aacute;nh gi&aacute; hết những t&iacute;nh năng, ưu điểm vượt trội thiết bị &acirc;m thanh n&agrave;y. B&ecirc;n cạnh việc tối giản trong thiết kế nhằm tiết kiệm chi ph&iacute; cho người d&ugrave;ng, những chiếc tai nghe n&agrave;y c&ograve;n sở hữu nhiều c&ocirc;ng nghệ h&agrave;ng đầu hiện nay. Tham gia trải nghiệm, c&aacute;c bạn mới c&oacute; thể đ&aacute;nh gi&aacute; được hết những t&iacute;nh năng ưu việt của d&ograve;ng tai nghe kh&ocirc;ng d&acirc;y đẳng cấp n&agrave;y.</p>\r\n<h2 style=\"box-sizing: border-box; color: #555555; width: 772.5px; margin-top: 0px; margin-bottom: 0.5em; text-rendering: optimizespeed; font-size: 1.6em; line-height: 1.2; font-family: Angkor, sans-serif; background-color: #ffffff;\"><span style=\"box-sizing: border-box; font-weight: bolder;\">Ưu, nhược điểm của tai nghe kh&ocirc;ng d&acirc;y</span></h2>\r\n<p style=\"box-sizing: border-box; margin-bottom: 1.3em; margin-top: 0px; color: #777777; font-family: Angkor, sans-serif; background-color: #ffffff; line-height: 1.2;\"><span style=\"box-sizing: border-box;\">Kh&ocirc;ng ai tồn tại một c&aacute;ch ho&agrave;n hảo. Mỗi con người đều c&oacute; những yếu điểm, điểm mạnh của ri&ecirc;ng m&igrave;nh. Đối với d&ograve;ng tai nghe kh&ocirc;ng d&acirc;y ch&uacute;ng ta đang t&igrave;m hiểu cũng vậy. Sau đ&acirc;y l&agrave; những tổng hợp, đ&aacute;nh gi&aacute; của t&ocirc;i về ưu, nhược điểm của n&oacute;.</span></p>\r\n<h3 style=\"box-sizing: border-box; color: #555555; width: 772.5px; margin-top: 0px; margin-bottom: 0.5em; text-rendering: optimizespeed; font-size: 1.25em; font-family: Angkor, sans-serif; background-color: #ffffff; line-height: 1.2;\"><span style=\"box-sizing: border-box; font-weight: bolder;\">Ưu điểm</span></h3>\r\n<p style=\"box-sizing: border-box; margin-bottom: 1.3em; margin-top: 0px; color: #777777; font-family: Angkor, sans-serif; background-color: #ffffff; line-height: 1.2;\"><span style=\"box-sizing: border-box;\"><span style=\"box-sizing: border-box; font-weight: bolder;\">Loại bỏ ho&agrave;n to&agrave;n d&acirc;y nối</span>:&nbsp;</span><span style=\"box-sizing: border-box;\">Thay v&igrave; sử dụng d&acirc;y nối như d&ograve;ng tai nghe truyền thống, thiết bị &acirc;m thanh n&agrave;y đ&atilde; đem đến cho người d&ugrave;ng những trải nghiệm ho&agrave;n to&agrave;n mới ngay từ &ldquo;ngoại h&igrave;nh&rdquo; ấn tương, tiện &iacute;ch của n&oacute;. Kh&ocirc;ng c&ograve;n những chiếc d&acirc;y nối rắc rối, phức tạp. Giớ đ&acirc;y, bạn sẽ được tận hưởng những c&ocirc;ng nghệ &acirc;m thanh chất lượng, hiện đại với sự tối ưu ho&agrave;n to&agrave;n trong thiết kế. Ngo&agrave;i ra, c&aacute;c ph&iacute;m chức năng đều được t&iacute;ch hợp đầy đủ gi&uacute;p người d&ugrave;ng dễ d&agrave;ng thao t&aacute;c khi d&ugrave;ng.</span></p>\r\n<p style=\"box-sizing: border-box; margin-bottom: 1.3em; margin-top: 0px; color: #777777; font-family: Angkor, sans-serif; background-color: #ffffff; line-height: 1.2;\"><span style=\"box-sizing: border-box;\"><img src=\"https://loakeoxanh.com/wp-content/uploads/2018/05/tai-nghe-bluetooth-2.jpg\" alt=\"tai-nghe-bluetooth\" /></span></p>\r\n<p style=\"box-sizing: border-box; margin-bottom: 1.3em; margin-top: 0px; color: #777777; font-family: Angkor, sans-serif; background-color: #ffffff; line-height: 1.2;\"><span style=\"box-sizing: border-box;\"><span style=\"box-sizing: border-box; font-weight: bolder;\">An to&agrave;n cho sức khỏe người d&ugrave;ng</span>:&nbsp;</span><span style=\"box-sizing: border-box;\">Sử dụng những thiết bị s&oacute;ng &acirc;m, đều &iacute;t nhiều g&acirc;y nguy hiểm kh&ocirc;ng nhỏ d&agrave;nh cho sức khỏe người d&ugrave;ng. Điều n&agrave;y đ&atilde; được c&aacute;c nh&agrave; khao học chứng minh, qua nhiều nghi&ecirc;n cứu kh&aacute;c nhau.</span></p>\r\n<p style=\"box-sizing: border-box; margin-bottom: 1.3em; margin-top: 0px; color: #777777; font-family: Angkor, sans-serif; background-color: #ffffff; line-height: 1.2;\"><span style=\"box-sizing: border-box;\">T&ocirc;i kh&ocirc;ng d&aacute;m khằng định chiếc tai nghe n&agrave;y sẽ bảo đảm an to&agrave;n tuyệt đối cho sức khỏe, cũng như an to&agrave;n của bạn. Tuy nhi&ecirc;n, t&ocirc;i d&aacute;m khẳng định đ&acirc;y l&agrave; một trong những thiết bị &acirc;m thanh c&oacute; thiết kế than thiện, &iacute;t g&acirc;y ảnh hưởng tối ưu cho người d&ugrave;ng.</span></p>\r\n<p style=\"box-sizing: border-box; margin-bottom: 1.3em; margin-top: 0px; color: #777777; font-family: Angkor, sans-serif; background-color: #ffffff; line-height: 1.2;\"><span style=\"box-sizing: border-box;\"><span style=\"box-sizing: border-box; font-weight: bolder;\">Bảo đảm an to&agrave;n th&ocirc;ng tin tốt nhất</span>:&nbsp;</span><span style=\"box-sizing: border-box;\">Lỗ hổng trong kết nối, th&ocirc;ng tin người d&ugrave;ng lu&ocirc;n l&agrave; &ldquo;b&agrave;i to&aacute;n&rdquo; kh&oacute; cho c&aacute;c h&atilde;ng c&ocirc;ng nghệ, chuy&ecirc;n vi&ecirc;n an ninh. Sử dụng sản phẩm tai nghe kh&ocirc;ng d&acirc;y n&agrave;y, th&ocirc;ng tin trong thiết bị của bạn sẽ được bảo vệ tối ưu nhờ những c&ocirc;ng nghệ m&atilde; h&oacute;a đặc biệt. Đồng thời, n&oacute; cũng c&oacute; chức năng tự động ghi nhớ với thiết bị được gh&eacute;p nối chỉ sau một lần d&ugrave;ng.</span></p>\r\n<p style=\"box-sizing: border-box; margin-bottom: 1.3em; margin-top: 0px; color: #777777; font-family: Angkor, sans-serif; background-color: #ffffff; line-height: 1.2;\">&nbsp;</p>\r\n<h3 style=\"box-sizing: border-box; color: #555555; width: 772.5px; margin-top: 0px; margin-bottom: 0.5em; text-rendering: optimizespeed; font-size: 1.25em; font-family: Angkor, sans-serif; background-color: #ffffff; line-height: 1.2;\"><span style=\"box-sizing: border-box; font-weight: bolder;\">Nhược điểm</span></h3>\r\n<p style=\"box-sizing: border-box; margin-bottom: 1.3em; margin-top: 0px; color: #777777; font-family: Angkor, sans-serif; background-color: #ffffff; line-height: 1.2;\"><span style=\"box-sizing: border-box;\">D&ugrave; sở hữu nhiều t&iacute;nh năng, ưu điểm vượt trội so với d&ograve;ng tai nghe c&oacute; d&acirc;y nhưng chiếc tai nghe n&agrave;y của ch&uacute;ng ta cũng c&oacute; những hạn chế nhất định.</span></p>\r\n<p style=\"box-sizing: border-box; margin-bottom: 1.3em; margin-top: 0px; color: #777777; font-family: Angkor, sans-serif; background-color: #ffffff; line-height: 1.2;\"><span style=\"box-sizing: border-box;\"><span style=\"box-sizing: border-box; font-weight: bolder;\">Gi&aacute; b&aacute;n kh&aacute; cao</span>: Đầu ti&ecirc;n ch&iacute;nh l&agrave; gi&aacute; b&aacute;n của sản phẩm. Thiết bị &acirc;m thanh n&agrave;y được t&iacute;ch hợp những c&ocirc;ng nghệ hiện đại để đem đến cho người d&ugrave;ng những trải nghiệm kh&oacute; qu&ecirc;n. Mặc d&ugrave; vậy, số tiền bạn phải trả để sở hữu n&oacute; thương cao hơn nhiều so với những d&ograve;ng tai nghe d&acirc;y th&ocirc;ng thường.</span></p>\r\n<p style=\"box-sizing: border-box; margin-bottom: 1.3em; margin-top: 0px; color: #777777; font-family: Angkor, sans-serif; background-color: #ffffff; line-height: 1.2;\"><span style=\"box-sizing: border-box;\"><span style=\"box-sizing: border-box; font-weight: bolder;\">Thời lượng sử dụng bị hạn chế</span>:&nbsp;</span><span style=\"box-sizing: border-box;\">Tai nghe bluetooth l&agrave; một trong những d&ograve;ng sản phẩm sử dụng c&ocirc;ng nghệ &acirc;m thanh kh&ocirc;ng d&acirc;y hiện đại. Một điều tất yếu, để c&oacute; thể hoạt động được th&igrave; n&oacute; phải được cung cấp một nguồn năng lượng để duy tr&igrave; việc sử dụng cho người d&ugrave;ng.</span></p>\r\n<p style=\"box-sizing: border-box; margin-bottom: 1.3em; margin-top: 0px; color: #777777; font-family: Angkor, sans-serif; background-color: #ffffff; line-height: 1.2;\"><span style=\"box-sizing: border-box;\">Tuy nhi&ecirc;n, điều n&agrave;y lại l&agrave; một &ldquo;điểm yếu&rdquo; của n&oacute; so với tai nghe kh&ocirc;ng d&acirc;y. Với &nbsp;tai nghe c&oacute; d&acirc;y, chỉ cần kết nối với thiết bị ph&aacute;t nhạc qua jack cắm th&ocirc;ng dụng ch&uacute;ng ta đ&atilde; c&oacute; thể thưởng thức những b&agrave;i h&aacute;t y&ecirc;u th&iacute;ch. C&ograve;n tai nghe bluetooth, để duy tr&igrave; hoạt động cho thiết bị, bắt buộc người d&ugrave;ng phải sạc điện cho n&oacute;. Điều n&agrave;y đ&atilde; dẫn đến t&igrave;nh trạng&nbsp;bị động&nbsp;c&ocirc;ng việc.</span></p>\r\n<p style=\"box-sizing: border-box; margin-bottom: 1.3em; margin-top: 0px; color: #777777; font-family: Angkor, sans-serif; background-color: #ffffff; line-height: 1.2;\"><span style=\"box-sizing: border-box;\"><span style=\"box-sizing: border-box; font-weight: bolder;\">Phạm vi kết nối</span>:&nbsp;</span><span style=\"box-sizing: border-box;\">Một t&igrave;nh trạng m&agrave; hầu hết người d&ugrave;ng n&agrave;o cũng gặp phải khi chiếc tai nghe n&agrave;y, nằm ở khả năng kết nối của n&oacute;. Như đ&atilde; n&oacute;i ở tr&ecirc;n, tai nghe kh&ocirc;ng d&acirc;y sử dụng c&ocirc;ng nghệ bluetooth để &nbsp;vận h&agrave;nh hoạt động của m&igrave;nh. Đ&ocirc;i l&uacute;c, khi đang sử dụng thiết bị sẽ rơi v&agrave;o t&igrave;nh trạng mất kết nối trong một khoảng thời gian d&agrave;i. Hiện tại, nhược điểm n&agrave;y vẫn chưa c&oacute; c&aacute;ch khắc phục dứt kho&aacute;t. Điều n&agrave;y đ&atilde; g&acirc;y ảnh hưởng &nbsp;kh&ocirc;ng nhỏ cho doanh số sản phẩm.</span></p>\r\n<p style=\"box-sizing: border-box; margin-bottom: 1.3em; margin-top: 0px; color: #777777; font-family: Angkor, sans-serif; background-color: #ffffff; line-height: 1.2;\">&nbsp;</p>\r\n<h3 style=\"box-sizing: border-box; color: #555555; width: 772.5px; margin-top: 0px; margin-bottom: 0.5em; text-rendering: optimizespeed; font-size: 1.25em; font-family: Angkor, sans-serif; background-color: #ffffff; line-height: 1.2;\"><span style=\"box-sizing: border-box; font-weight: bolder;\">Một v&agrave;i yếu tố kh&aacute;c</span></h3>\r\n<p style=\"box-sizing: border-box; margin-bottom: 1.3em; margin-top: 0px; color: #777777; font-family: Angkor, sans-serif; background-color: #ffffff; line-height: 1.2;\"><span style=\"box-sizing: border-box;\">Chất lượng giải tr&iacute;, cũng như hiệu quả c&ocirc;ng việc sẽ được thể hiện một c&aacute;ch chất lượng nhất khi n&oacute; kiểm so&aacute;t khả năng hủy tiếng ồn. Rất &iacute;t mẫu tai nghe di động, được trang bị những t&iacute;nh năng khử tiếng ồn hiệu quả, chất lượng </span><span style=\"box-sizing: border-box;\">Đối với những bạn trẻ năng động, c&aacute; t&iacute;nh yếu tố &ldquo;ngoại h&igrave;nh&rdquo; l&agrave; hết sức quan trọng. Một chiếc tai nghe c&oacute; thiết kế thời trang, năng động, c&aacute; t&iacute;nh sẽ gi&uacute;p bạn thu h&uacute;t sự quan t&acirc;m, ch&uacute; &yacute; của mọi người mỗi khi xuất hiện.</span></p>', '2022-06-14 17:15:11'),
-(9, 'Cách đeo tai nghe đúng để bảo vệ đôi tai của bạn, tránh gây hại thính giác', 'cach-deo-tai-nghe-dung-de-bao-ve-doi-tai-cua-ban-tranh-gay-hai-thinh-giac-72', '1655227191.jpg', 'Ngày nay, hầu hết mọi người đều sở hữu cho mình một chiếc tai nghe để có thể tận hưởng âm thanh sống động và không làm phiền những người xung quanh. Tuy nhiên, nhiều bạn vẫn chưa biết cách đeo tai nghe đúng vừa thoải mái nghe nhạc, vừa bảo vệ đôi tai của bạn, hãy cùng Điện máy XANH tìm hiểu qua bài viết sau nhé!', '<h3 id=\"hmenuid1\" style=\"margin: 15px 0px 10px; padding: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 20px; line-height: 31px; font-family: Arial, Helvetica, sans-serif; color: #333333; outline: none;\">T&aacute;c hại của việc sử dụng tai nghe kh&ocirc;ng đ&uacute;ng c&aacute;ch</h3>\r\n<p style=\"margin: 12px 0px; padding: 0px; margin-block: 0px; text-rendering: geometricprecision; color: #333333; line-height: 24.8px; font-family: Arial, Helvetica, sans-serif; font-size: 16px;\">Đeo tai nghe li&ecirc;n tục trong nhiều giờ sẽ dẫn đến việc tế b&agrave;o thần kinh trong ốc tai l&agrave;m việc qu&aacute; sức, g&acirc;y ảnh hưởng xấu đến đ&ocirc;i tai của bạn.</p>\r\n<p style=\"margin: 12px 0px; padding: 0px; margin-block: 0px; text-rendering: geometricprecision; color: #333333; line-height: 24.8px; font-family: Arial, Helvetica, sans-serif; font-size: 16px;\">&nbsp;</p>\r\n<p style=\"margin: 12px 0px; padding: 0px; margin-block: 0px; text-rendering: geometricprecision; color: #333333; line-height: 24.8px; font-family: Arial, Helvetica, sans-serif; font-size: 16px;\">Dưới đ&acirc;y l&agrave; một v&agrave;i t&aacute;c hại của việc sử dụng tai nghe kh&ocirc;ng đ&uacute;ng c&aacute;ch:</p>\r\n<p style=\"margin: 12px 0px; padding: 0px; margin-block: 0px; text-rendering: geometricprecision; color: #333333; line-height: 24.8px; font-family: Arial, Helvetica, sans-serif; font-size: 16px;\">-Nghe nhạc bằng tai nghe li&ecirc;n tục tr&ecirc;n 2 giờ một ng&agrave;y dẫn đến việc c&aacute;c tế b&agrave;o thần kinh trong ốc tai phải l&agrave;m việc qu&aacute; sức khiến <strong style=\"margin: 0px; padding: 0px;\">giảm th&iacute;nh lực</strong>&nbsp;v&agrave; khả năng nghe &acirc;m thanh b&ecirc;n ngo&agrave;i k&eacute;m hơn.</p>\r\n<p style=\"margin: 12px 0px; padding: 0px; margin-block: 0px; text-rendering: geometricprecision; color: #333333; line-height: 24.8px; font-family: Arial, Helvetica, sans-serif; font-size: 16px;\"><span style=\"margin: 0px; padding: 0px;\">-</span><strong style=\"margin: 0px; padding: 0px;\"> Ảnh hưởng đến hệ thần kinh trung ương </strong>khi bạn nghe &acirc;m thanh mạnh v&agrave; k&eacute;o d&agrave;i đặc biệt l&agrave; nghe nhạc rồi ngủ qu&ecirc;n. Khi đ&oacute; tai của bạn trong trạng th&aacute;i k&iacute;ch th&iacute;ch li&ecirc;n tục kh&ocirc;ng chỉ l&agrave;m tổn thương cơ quan th&iacute;nh gi&aacute;c m&agrave; c&ograve;n ảnh hưởng đến hệ thần kinh trung ương.</p>\r\n<p style=\"margin: 12px 0px; padding: 0px; margin-block: 0px; text-rendering: geometricprecision; color: #333333; line-height: 24.8px; font-family: Arial, Helvetica, sans-serif; font-size: 16px;\">-&nbsp;<strong style=\"margin: 0px; padding: 0px;\">Mất tập trung khi l&aacute;i xe&nbsp;</strong>v&igrave; phần lớn tai nghe được thiết kế để tr&aacute;nh nghe những tiếng ồn xung quanh, gi&uacute;p chất lượng &acirc;m thanh tốt hơn. V&igrave; thế khi vừa l&aacute;i xe, vừa đeo tai nghe sẽ rất nguy hiểm v&agrave; dễ g&acirc;y tai nạn.</p>\r\n<p style=\"margin: 12px 0px; padding: 0px; margin-block: 0px; text-rendering: geometricprecision; color: #333333; line-height: 24.8px; font-family: Arial, Helvetica, sans-serif; font-size: 16px;\">- N&uacute;t tai nghe kh&ocirc;ng vệ sinh đ&uacute;ng c&aacute;ch dễ bị ẩm dễ bị vi tr&ugrave;ng, vi nấm ph&aacute;t triển g&acirc;y ra t&igrave;nh trạng vi&ecirc;m ống tai, ch&agrave;m ống tai, nhiễm nấm.</p>\r\n<p style=\"margin: 12px 0px; padding: 0px; margin-block: 0px; text-rendering: geometricprecision; color: #333333; line-height: 24.8px; font-family: Arial, Helvetica, sans-serif; font-size: 16px;\">&nbsp;</p>\r\n<h3 id=\"hmenuid2\" style=\"margin: 15px 0px 10px; padding: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 20px; line-height: 31px; font-family: Arial, Helvetica, sans-serif; color: #333333; outline: none;\">C&aacute;ch đeo tai nghe đ&uacute;ng bảo vệ th&iacute;nh gi&aacute;c v&agrave; nghe nhạc chất lượng</h3>\r\n<p><span style=\"color: #333333; font-family: Arial, Helvetica, sans-serif; font-size: 16px;\">Đối với tất cả loại tai nghe đều cần x&aacute;c định đ&uacute;ng b&ecirc;n tr&aacute;i v&agrave; phải để tăng sự thoải m&aacute;i trong trải nghiệm của bạn, đặc biệt với c&aacute;c hiệu ứng &acirc;m thanh đa k&ecirc;nh như&nbsp;</span><a style=\"margin: 0px; padding: 0px; text-decoration-line: none; transition: all 0.2s ease 0s; color: #167ac6; font-family: Arial, Helvetica, sans-serif; font-size: 16px;\" title=\"Spatial Audio\" href=\"https://www.dienmayxanh.com/kinh-nghiem-hay/cac-cong-nghe-am-thanh-tren-tai-nghe-apple-1241393#hmenuid3\" target=\"_blank\" rel=\"noopener\">Spatial Audio</a><span style=\"color: #333333; font-family: Arial, Helvetica, sans-serif; font-size: 16px;\">,&nbsp;</span><a style=\"margin: 0px; padding: 0px; text-decoration-line: none; transition: all 0.2s ease 0s; color: #167ac6; font-family: Arial, Helvetica, sans-serif; font-size: 16px;\" title=\"Dolby Atmos\" href=\"https://www.dienmayxanh.com/kinh-nghiem-hay/cong-nghe-am-thanh-dolby-la-gi-827752\" target=\"_blank\" rel=\"noopener\">Dolby Atmos</a><span style=\"color: #333333; font-family: Arial, Helvetica, sans-serif; font-size: 16px;\">.</span></p>\r\n<p style=\"margin: 12px 0px; padding: 0px; margin-block: 0px; text-rendering: geometricprecision; color: #333333; line-height: 24.8px; font-family: Arial, Helvetica, sans-serif; font-size: 16px;\">Th&ocirc;ng thường, tr&ecirc;n tai nghe sẽ c&oacute;&nbsp;k&yacute; hiệu&nbsp;\"L\"&nbsp;hoặc&nbsp;\"R\" gi&uacute;p bạn dễ d&agrave;ng x&aacute;c định tr&aacute;i phải để sử dụng đ&uacute;ng. Trong đ&oacute;:</p>\r\n<ul style=\"margin: 0px; padding: 0px; list-style: none; color: #333333; font-family: Arial, Helvetica, sans-serif; font-size: 16px;\">\r\n<li style=\"margin: 0px; padding: 0px 10px 0px 20px; list-style: none; line-height: 24.8px;\"><strong style=\"margin: 0px; padding: 0px;\">\"L\"</strong>: Left/Tai tr&aacute;i.</li>\r\n<li style=\"margin: 0px; padding: 0px 10px 0px 20px; list-style: none; line-height: 24.8px;\"><strong style=\"margin: 0px; padding: 0px;\">\"R\"</strong>: Right/Tai phải.</li>\r\n<li style=\"margin: 0px; padding: 0px 10px 0px 20px; list-style: none; line-height: 24.8px;\"><img src=\"https://cdn.tgdd.vn/Files/2018/08/22/1111657/deo-tai-nghe-viec-nho-nhung-hau-qua-to-neu-khong-b.jpg\" alt=\"C&aacute;ch x&aacute;c định tr&aacute;i phải của tai nghe\" /></li>\r\n</ul>\r\n<p>&nbsp;</p>\r\n<p style=\"margin: 12px 0px; padding: 0px; margin-block: 0px; text-rendering: geometricprecision; color: #333333; line-height: 24.8px; font-family: Arial, Helvetica, sans-serif; font-size: 16px;\"><strong style=\"margin: 0px; padding: 0px;\">Bước 1:</strong>&nbsp;Bạn đặt đầu m&uacute;t tai nghe v&agrave;o đ&uacute;ng lỗ tai dọc theo chiều ống tai.</p>\r\n<p><img src=\"https://cdn.tgdd.vn/Files/2018/08/22/1111657/deo-tai-nghe-viec-nho-nhung-hau-qua-to-neu-khong-b-1.jpg\" alt=\"Bạn đặt đầu m&uacute;t tai nghe v&agrave;o đ&uacute;ng lỗ tai theo chiều dọc sao cho song song với mặt đất.\" /></p>\r\n<p style=\"margin: 12px 0px; padding: 0px; margin-block: 0px; text-rendering: geometricprecision; color: #333333; line-height: 24.8px; font-family: Arial, Helvetica, sans-serif; font-size: 16px;\"><strong style=\"margin: 0px; padding: 0px;\">Bước 2:</strong>&nbsp;Bạn&nbsp;mở rộng tai bằng c&aacute;ch&nbsp;d&ugrave;ng tay c&ograve;n lại k&eacute;o nhẹ d&aacute;i tai xuống ph&iacute;a dưới.</p>\r\n<p style=\"margin: 12px 0px; padding: 0px; margin-block: 0px; text-rendering: geometricprecision; color: #333333; line-height: 24.8px; font-family: Arial, Helvetica, sans-serif; font-size: 16px;\"><strong style=\"margin: 0px; padding: 0px;\">Bước 3:&nbsp;</strong>Bạn&nbsp;xoay m&uacute;t tai nghe hướng ra trước nhẹ nh&agrave;ng&nbsp;tới khi tai nghe nằm vừa vặn trong tai.</p>\r\n<p><img src=\"https://cdn.tgdd.vn/Files/2018/08/22/1111657/deo-tai-nghe-viec-nho-nhung-hau-qua-to-neu-khong-b-2.jpg\" alt=\"Bạn mở rộng ống tai hơn\" /></p>\r\n<p style=\"margin: 12px 0px; padding: 0px; margin-block: 0px; text-rendering: geometricprecision; color: #333333; line-height: 24.8px; font-family: Arial, Helvetica, sans-serif; font-size: 16px;\"><strong style=\"margin: 0px; padding: 0px;\">Bước 4:&nbsp;</strong>Thả tay giữ&nbsp;d&aacute;i tai&nbsp;ra v&agrave; ấn nhẹ phần m&uacute;t tai để đảm bảo tai nghe được đeo chắc chắn.</p>\r\n<p><img src=\"https://cdn.tgdd.vn/Files/2018/08/22/1111657/deo-tai-nghe-viec-nho-nhung-hau-qua-to-neu-khong-b-3.jpg\" alt=\"Đeo tai nghe In-ear đ&uacute;ng c&aacute;ch\" /></p>\r\n<p style=\"margin: 12px 0px; padding: 0px; margin-block: 0px; text-rendering: geometricprecision; color: #333333; line-height: 24.8px; font-family: Arial, Helvetica, sans-serif; font-size: 16px;\">Bạn l&agrave;m tương tự với b&ecirc;n tai c&ograve;n lại, l&uacute;c n&agrave;y bạn đ&atilde; đeo tai nghe đ&uacute;ng c&aacute;ch v&agrave;&nbsp;kh&ocirc;ng phải lo lắng về việc tai nghe sẽ bị rơi ra.</p>\r\n<p>&nbsp;</p>\r\n<ul style=\"margin: 0px; padding: 0px; list-style: none; color: #333333; font-family: Arial, Helvetica, sans-serif; font-size: 16px;\">\r\n<li style=\"margin: 0px; padding: 0px 10px 0px 20px; list-style: none; line-height: 24.8px;\">&nbsp;</li>\r\n</ul>', '2022-06-14 17:19:51'),
-(10, 'Tai nghe True Wireless là gì? Cơ chế hoạt động và ưu nhược điểm', 'tai-nghe-true-wireless-la-gi-co-che-hoat-dong-va-uu-nhuoc-diem-43-31-49', '1655227435.jpg', 'Hiện nay, người dùng rất ưa chuộng sử dụng loại tai nghe True Wireless. Vậy tai nghe True Wireless là gì, có những ưu điểm và nhược điểm gì, vì sao lại thu hút rất nhiều người dùng? Hãy xem ngay bài viết dưới đây để tìm câu trả lời nhé!\r\n', '<h3 id=\"hmenuid1\" style=\"margin: 0px; padding: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-weight: normal; font-stretch: normal; font-size: 22px; line-height: 37px; font-family: Arial, Helvetica, sans-serif; color: #333333; outline: none;\"><strong style=\"margin: 0px; padding: 0px;\">1. Tai nghe True Wireless l&agrave; g&igrave;?</strong></h3>\r\n<p style=\"margin: 10px 0px; padding: 0px; margin-block: 0px; text-rendering: geometricprecision; overflow: hidden; font-size: 18px; line-height: 28px; color: #333333; font-family: Arial, Helvetica, sans-serif;\">Tai nghe True Wireless (tai nghe kh&ocirc;ng d&acirc;y ho&agrave;n to&agrave;n hoặc tai nghe kh&ocirc;ng d&acirc;y thực sự) l&agrave; sản phẩm bao gồm&nbsp;<strong style=\"margin: 0px; padding: 0px;\">2 phần tai nghe&nbsp;</strong>(tr&aacute;i - phải) kết nối với nhau th&ocirc;ng qua&nbsp;<a style=\"margin: 0px; padding: 0px; text-decoration-line: none; transition: all 0.2s ease 0s; color: #288ad6;\" href=\"https://www.thegioididong.com/hoi-dap/cong-nghe-bluetooth-743602\" target=\"_blank\" rel=\"noopener\" data-cke-saved-href=\"https://www.thegioididong.com/hoi-dap/cong-nghe-bluetooth-743602\">c&ocirc;ng nghệ Bluetooth</a>, kh&ocirc;ng cần sử dụng bất cứ d&acirc;y dẫn n&agrave;o.</p>\r\n<p style=\"margin: 10px 0px; padding: 0px; margin-block: 0px; text-rendering: geometricprecision; overflow: hidden; font-size: 18px; line-height: 28px; color: #333333; font-family: Arial, Helvetica, sans-serif;\">C&ocirc;ng nghệ True Wireless l&agrave;&nbsp;<strong style=\"margin: 0px; padding: 0px;\">cải tiến đột ph&aacute;</strong>&nbsp;trong c&ocirc;ng nghệ tai nghe kh&ocirc;ng d&acirc;y Bluetooth, gi&uacute;p phụ kiện n&agrave;y&nbsp;<strong style=\"margin: 0px; padding: 0px;\">tương th&iacute;ch với kh&aacute; nhiều loại thiết bị</strong>.</p>\r\n<h3 id=\"hmenuid2\" style=\"margin: 0px; padding: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-weight: normal; font-stretch: normal; font-size: 22px; line-height: 37px; font-family: Arial, Helvetica, sans-serif; color: #333333; outline: none;\"><strong style=\"margin: 0px; padding: 0px;\">2. Cơ chế hoạt động của tai nghe True Wireless</strong></h3>\r\n<p style=\"margin: 10px 0px; padding: 0px; margin-block: 0px; text-rendering: geometricprecision; overflow: hidden; font-size: 18px; line-height: 28px; color: #333333; font-family: Arial, Helvetica, sans-serif;\">Tai nghe True Wireless thường được trang bị&nbsp;<strong style=\"margin: 0px; padding: 0px;\">một con chip v&agrave; kết nối Bluetooth đủ tốt</strong>&nbsp;(thường l&agrave; bản&nbsp;<a style=\"margin: 0px; padding: 0px; text-decoration-line: none; transition: all 0.2s ease 0s; color: #288ad6;\" href=\"http://www.thegioididong.com/hoi-dap/bluetooth-42-la-gi-895615\" target=\"_blank\" rel=\"noopener\" data-cke-saved-href=\"http://www.thegioididong.com/hoi-dap/bluetooth-42-la-gi-895615\">Bluetooth 4.2</a>&nbsp;trở l&ecirc;n) để nhận &acirc;m thanh từ c&aacute;c nguồn (<a style=\"margin: 0px; padding: 0px; text-decoration-line: none; transition: all 0.2s ease 0s; color: #288ad6;\" href=\"http://www.thegioididong.com/dtdd\" target=\"_blank\" rel=\"noopener\" data-cke-saved-href=\"http://www.thegioididong.com/dtdd\">điện thoại</a>,&nbsp;<a style=\"margin: 0px; padding: 0px; text-decoration-line: none; transition: all 0.2s ease 0s; color: #288ad6;\" href=\"http://www.thegioididong.com/may-tinh-bang\" target=\"_blank\" rel=\"noopener\" data-cke-saved-href=\"http://www.thegioididong.com/may-tinh-bang\">tablet</a>,&nbsp;<a style=\"margin: 0px; padding: 0px; text-decoration-line: none; transition: all 0.2s ease 0s; color: #288ad6;\" href=\"http://www.thegioididong.com/laptop\" target=\"_blank\" rel=\"noopener\" data-cke-saved-href=\"http://www.thegioididong.com/laptop\">laptop</a>,...) rồi đưa tới một tai nghe ch&iacute;nh (thường l&agrave; tai nghe b&ecirc;n phải (R) hoặc t&ugrave;y h&atilde;ng sản xuất quy định).</p>\r\n<p style=\"margin: 10px 0px; padding: 0px; margin-block: 0px; text-rendering: geometricprecision; overflow: hidden; font-size: 18px; line-height: 28px; color: #333333; font-family: Arial, Helvetica, sans-serif;\">Sau đ&oacute;,<a style=\"margin: 0px; padding: 0px; text-decoration-line: none; transition: all 0.2s ease 0s; color: #288ad6;\" href=\"https://www.thegioididong.com/tai-nghe\" target=\"_blank\" rel=\"noopener\" data-cke-saved-href=\"https://www.thegioididong.com/tai-nghe\">&nbsp;tai nghe</a>&nbsp;ch&iacute;nh sẽ gửi t&iacute;n hiệu &acirc;m thanh cho chiếc c&ograve;n lại để&nbsp;<strong style=\"margin: 0px; padding: 0px;\">đồng bộ</strong>, mang lại trải nghiệm &acirc;m thanh stereo.</p>\r\n<p style=\"margin: 10px 0px; padding: 0px; margin-block: 0px; text-rendering: geometricprecision; overflow: hidden; font-size: 18px; line-height: 28px; color: #333333; font-family: Arial, Helvetica, sans-serif;\"><img src=\"https://cdn.tgdd.vn/hoi-dap/1201555/tai-nghe-true-wireless-la-gi-uu-nhuoc-diem-the-nao-02-800x600.jpg\" alt=\"Cơ chế hoạt động của tai nghe True Wireless\" /></p>\r\n<p style=\"margin: 10px 0px; padding: 0px; margin-block: 0px; text-rendering: geometricprecision; overflow: hidden; font-size: 18px; line-height: 28px; color: #333333; font-family: Arial, Helvetica, sans-serif;\">&nbsp;</p>\r\n<h3 id=\"hmenuid3\" style=\"margin: 0px; padding: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-weight: normal; font-stretch: normal; font-size: 22px; line-height: 37px; font-family: Arial, Helvetica, sans-serif; color: #333333; outline: none;\"><strong style=\"margin: 0px; padding: 0px;\">3. Tai nghe True Wireless ph&ugrave; hợp với ai?</strong></h3>\r\n<p style=\"margin: 10px 0px; padding: 0px; margin-block: 0px; text-rendering: geometricprecision; overflow: hidden; font-size: 18px; line-height: 28px; color: #333333; font-family: Arial, Helvetica, sans-serif;\">Nếu bạn l&agrave; người y&ecirc;u th&iacute;ch thiết kế&nbsp;<strong style=\"margin: 0px; padding: 0px;\">tiện lợi</strong>, nhỏ gọn&nbsp;<strong style=\"margin: 0px; padding: 0px;\">kh&ocirc;ng rườm r&agrave;&nbsp;</strong>hoặc bạn muốn trải nghiệm&nbsp;<strong style=\"margin: 0px; padding: 0px;\">sự tiện dụng&nbsp;</strong>của c&ocirc;ng nghệ mới v&agrave; ưa chuộng sự&nbsp;<strong style=\"margin: 0px; padding: 0px;\">s&agrave;nh điệu&nbsp;</strong>th&igrave; phụ kiện tai nghe True Wireless sẽ l&agrave; lựa chọn ph&ugrave; hợp cho bạn.</p>\r\n<p><img style=\"float: left;\" src=\"https://cdn.tgdd.vn/hoi-dap/1201555/tai-nghe-true-wireless-la-gi-uu-nhuoc-diem-the-nao-03-800x600.jpg\" alt=\"Tai nghe True Wireless ph&ugrave; hợp với người y&ecirc;u th&iacute;ch sự tiện lợi\" /></p>\r\n<h3 style=\"margin: 0px; padding: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-weight: normal; font-stretch: normal; font-size: 22px; line-height: 37px; font-family: Arial, Helvetica, sans-serif; color: #333333; outline: none;\">&nbsp;</h3>\r\n<h3 style=\"margin: 0px; padding: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-weight: normal; font-stretch: normal; font-size: 22px; line-height: 37px; font-family: Arial, Helvetica, sans-serif; color: #333333; outline: none;\">&nbsp;</h3>\r\n<h3 style=\"margin: 0px; padding: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-weight: normal; font-stretch: normal; font-size: 22px; line-height: 37px; font-family: Arial, Helvetica, sans-serif; color: #333333; outline: none;\">&nbsp;</h3>\r\n<h3 style=\"margin: 0px; padding: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-weight: normal; font-stretch: normal; font-size: 22px; line-height: 37px; font-family: Arial, Helvetica, sans-serif; color: #333333; outline: none;\">&nbsp;</h3>\r\n<h3 style=\"margin: 0px; padding: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-weight: normal; font-stretch: normal; font-size: 22px; line-height: 37px; font-family: Arial, Helvetica, sans-serif; color: #333333; outline: none;\">&nbsp;</h3>\r\n<h3 style=\"margin: 0px; padding: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-weight: normal; font-stretch: normal; font-size: 22px; line-height: 37px; font-family: Arial, Helvetica, sans-serif; color: #333333; outline: none;\">&nbsp;</h3>\r\n<h3 style=\"margin: 0px; padding: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-weight: normal; font-stretch: normal; font-size: 22px; line-height: 37px; font-family: Arial, Helvetica, sans-serif; color: #333333; outline: none;\">&nbsp;</h3>\r\n<h3 style=\"margin: 0px; padding: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-weight: normal; font-stretch: normal; font-size: 22px; line-height: 37px; font-family: Arial, Helvetica, sans-serif; color: #333333; outline: none;\">&nbsp;</h3>\r\n<h3 style=\"margin: 0px; padding: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-weight: normal; font-stretch: normal; font-size: 22px; line-height: 37px; font-family: Arial, Helvetica, sans-serif; color: #333333; outline: none;\">&nbsp;</h3>\r\n<h3 style=\"margin: 0px; padding: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-weight: normal; font-stretch: normal; font-size: 22px; line-height: 37px; font-family: Arial, Helvetica, sans-serif; color: #333333; outline: none;\">&nbsp;</h3>\r\n<h3 style=\"margin: 0px; padding: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-weight: normal; font-stretch: normal; font-size: 22px; line-height: 37px; font-family: Arial, Helvetica, sans-serif; color: #333333; outline: none;\">&nbsp;</h3>\r\n<h3 style=\"margin: 0px; padding: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-weight: normal; font-stretch: normal; font-size: 22px; line-height: 37px; font-family: Arial, Helvetica, sans-serif; color: #333333; outline: none;\">&nbsp;</h3>\r\n<h3 style=\"margin: 0px; padding: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-weight: normal; font-stretch: normal; font-size: 22px; line-height: 37px; font-family: Arial, Helvetica, sans-serif; color: #333333; outline: none;\">&nbsp;</h3>\r\n<h3 style=\"margin: 0px; padding: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-weight: normal; font-stretch: normal; font-size: 22px; line-height: 37px; font-family: Arial, Helvetica, sans-serif; color: #333333; outline: none;\">&nbsp;</h3>\r\n<h3 style=\"margin: 0px; padding: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-weight: normal; font-stretch: normal; font-size: 22px; line-height: 37px; font-family: Arial, Helvetica, sans-serif; color: #333333; outline: none;\">&nbsp;</h3>\r\n<h3 style=\"margin: 0px; padding: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-weight: normal; font-stretch: normal; font-size: 22px; line-height: 37px; font-family: Arial, Helvetica, sans-serif; color: #333333; outline: none;\">&nbsp;</h3>\r\n<h3 style=\"margin: 0px; padding: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-weight: normal; font-stretch: normal; font-size: 22px; line-height: 37px; font-family: Arial, Helvetica, sans-serif; color: #333333; outline: none;\">&nbsp;</h3>\r\n<h3 id=\"hmenuid4\" style=\"margin: 0px; padding: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-weight: normal; font-stretch: normal; font-size: 22px; line-height: 37px; font-family: Arial, Helvetica, sans-serif; color: #333333; outline: none;\"><strong style=\"margin: 0px; padding: 0px;\">4. So s&aacute;nh tai nghe True Wireless với tai nghe kh&ocirc;ng d&acirc;y th&ocirc;ng thường</strong></h3>\r\n<p style=\"margin: 10px 0px; padding: 0px; margin-block: 0px; text-rendering: geometricprecision; overflow: hidden; font-size: 18px; line-height: 28px; color: #333333; font-family: Arial, Helvetica, sans-serif;\">Tai nghe True Wireless ho&agrave;n to&agrave;n&nbsp;<strong style=\"margin: 0px; padding: 0px;\">kh&ocirc;ng sử dụng một sợi d&acirc;y dẫn&nbsp;</strong>n&agrave;o cả, tai nghe c&oacute; thiết kế đơn giản chỉ với&nbsp;<strong style=\"margin: 0px; padding: 0px;\">2 housing&nbsp;</strong>gắn trực tiếp v&agrave;o tai. Trong khi đ&oacute;, tai nghe kh&ocirc;ng d&acirc;y th&ocirc;ng thường được trang bị&nbsp;<strong style=\"margin: 0px; padding: 0px;\">một sợi d&acirc;y kết nối</strong>&nbsp;(neckband) quanh cổ để cố định thiết bị khi đeo.<br /><img style=\"float: left;\" src=\"https://cdn.tgdd.vn/hoi-dap/1201555/tai-nghe-true-wireless-la-gi-uu-nhuoc-diem-the-nao-04-800x600.jpg\" alt=\"Tai nghe True Wireless kh&ocirc;ng sử dụng d&acirc;y dẫn \" /></p>\r\n<h3 id=\"hmenuid5\" style=\"margin: 0px; padding: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-weight: normal; font-stretch: normal; font-size: 22px; line-height: 37px; font-family: Arial, Helvetica, sans-serif; color: #333333; outline: none;\"><strong style=\"margin: 0px; padding: 0px;\">5. C&aacute;c ưu điểm v&agrave; nhược điểm của tai nghe True Wireless</strong></h3>\r\n<h4 id=\"subhmenuid1\" style=\"margin: 5px 0px 10px; padding: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-weight: normal; font-stretch: normal; font-size: 20px; line-height: 28px; font-family: Arial, Helvetica, sans-serif; color: #333333; outline: none; word-spacing: 0.6px;\"><strong style=\"margin: 0px; padding: 0px;\">Ưu điểm</strong></h4>\r\n<p style=\"margin: 10px 0px; padding: 0px; margin-block: 0px; text-rendering: geometricprecision; overflow: hidden; font-size: 18px; line-height: 28px; color: #333333; font-family: Arial, Helvetica, sans-serif;\">- Tai nghe True Wireless c&oacute; thiết kế tiện lợi, với k&iacute;ch thước nhỏ gọn, trọng lượng rất nhẹ, được trang bị bọc su mềm mại.</p>\r\n<p style=\"margin: 10px 0px; padding: 0px; margin-block: 0px; text-rendering: geometricprecision; overflow: hidden; font-size: 18px; line-height: 28px; color: #333333; font-family: Arial, Helvetica, sans-serif;\">- Dễ d&agrave;ng thiết lập v&agrave; sử dụng chỉ với thao t&aacute;c nhấn v&agrave;o n&uacute;t nguồn tr&ecirc;n k&eacute;n sạc hoặc lấy ch&uacute;ng ra khỏi hộp.</p>\r\n<p style=\"margin: 10px 0px; padding: 0px; margin-block: 0px; text-rendering: geometricprecision; overflow: hidden; font-size: 18px; line-height: 28px; color: #333333; font-family: Arial, Helvetica, sans-serif;\">- Đem đến trải nghiệm &acirc;m thanh sống động, chất &acirc;m r&otilde; r&agrave;ng, tương đối tốt.</p>\r\n<p style=\"margin: 10px 0px; padding: 0px; margin-block: 0px; text-rendering: geometricprecision; overflow: hidden; font-size: 18px; line-height: 28px; color: #333333; font-family: Arial, Helvetica, sans-serif;\">- Gi&aacute; cả hợp l&yacute; v&agrave; kh&aacute; đa dạng t&ugrave;y v&agrave;o thương hiệu, t&iacute;nh năng, c&aacute;c c&ocirc;ng nghệ đi k&egrave;m,...</p>\r\n<p style=\"margin: 10px 0px; padding: 0px; margin-block: 0px; text-rendering: geometricprecision; overflow: hidden; font-size: 18px; line-height: 28px; color: #333333; font-family: Arial, Helvetica, sans-serif;\"><img style=\"float: left;\" src=\"https://cdn.tgdd.vn/hoi-dap/1201555/tai-nghe-true-wireless-la-gi-uu-nhuoc-diem-the-nao-05-800x550.jpg\" alt=\"Tai nghe True Wireless c&oacute; nhiều ưu điểm nổi bật\" /></p>\r\n<h4 id=\"subhmenuid2\" style=\"margin: 5px 0px 10px; padding: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-weight: normal; font-stretch: normal; font-size: 20px; line-height: 28px; font-family: Arial, Helvetica, sans-serif; color: #333333; outline: none; word-spacing: 0.6px;\"><strong style=\"margin: 0px; padding: 0px;\">Nhược điểm</strong></h4>\r\n<p style=\"margin: 10px 0px; padding: 0px; margin-block: 0px; text-rendering: geometricprecision; overflow: hidden; font-size: 18px; line-height: 28px; color: #333333; font-family: Arial, Helvetica, sans-serif;\">- K&iacute;ch thước nhỏ n&ecirc;n dễ l&agrave;m rơi mất tai nghe.</p>\r\n<p style=\"margin: 10px 0px; padding: 0px; margin-block: 0px; text-rendering: geometricprecision; overflow: hidden; font-size: 18px; line-height: 28px; color: #333333; font-family: Arial, Helvetica, sans-serif;\">- Tai nghe c&oacute; thời lượng sử dụng pin thấp.</p>\r\n<p style=\"margin: 10px 0px; padding: 0px; margin-block: 0px; text-rendering: geometricprecision; overflow: hidden; font-size: 18px; line-height: 28px; color: #333333; font-family: Arial, Helvetica, sans-serif;\">- C&aacute;c n&uacute;t cảm ứng điều khiển tr&ecirc;n tai nghe đ&ocirc;i khi phản hồi chậm, kh&ocirc;ng theo &yacute; muốn.</p>\r\n<p style=\"margin: 10px 0px; padding: 0px; margin-block: 0px; text-rendering: geometricprecision; overflow: hidden; font-size: 18px; line-height: 28px; color: #333333; font-family: Arial, Helvetica, sans-serif;\">- Chất lượng &acirc;m thanh chưa thể s&aacute;nh bằng tai nghe c&oacute; d&acirc;y (nếu c&oacute; c&ugrave;ng mức gi&aacute;).</p>\r\n<p><img src=\"https://cdn.tgdd.vn/hoi-dap/1201555/tai-nghe-true-wireless-la-gi-uu-nhuoc-diem-the-nao-06-800x550.jpg\" alt=\"Chất lượng &acirc;m thanh l&agrave; r&agrave;o cản đối với tai nghe True Wireless\" /></p>\r\n<h3 id=\"hmenuid6\" style=\"margin: 0px; padding: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-weight: normal; font-stretch: normal; font-size: 22px; line-height: 37px; font-family: Arial, Helvetica, sans-serif; color: #333333; outline: none;\"><strong style=\"margin: 0px; padding: 0px;\">6. Chất lượng &acirc;m thanh tr&ecirc;n tai nghe True Wireless như thế n&agrave;o?</strong></h3>\r\n<p style=\"margin: 10px 0px; padding: 0px; margin-block: 0px; text-rendering: geometricprecision; overflow: hidden; font-size: 18px; line-height: 28px; color: #333333; font-family: Arial, Helvetica, sans-serif;\">Tai nghe True Wireless c&oacute; chất lượng &acirc;m thanh&nbsp;<strong style=\"margin: 0px; padding: 0px;\">tương đối tốt&nbsp;</strong>nhờ t&iacute;ch hợp c&aacute;c<strong style=\"margin: 0px; padding: 0px;\">&nbsp;c&ocirc;ng nghệ &acirc;m thanh hiện đại</strong>,&nbsp;<strong style=\"margin: 0px; padding: 0px;\">khả năng giải m&atilde; &acirc;m thanh chất lượng</strong>&nbsp;c&ugrave;ng c&ocirc;ng nghệ chống ồn tốt.</p>\r\n<p style=\"margin: 10px 0px; padding: 0px; margin-block: 0px; text-rendering: geometricprecision; overflow: hidden; font-size: 18px; line-height: 28px; color: #333333; font-family: Arial, Helvetica, sans-serif;\">Tuy nhi&ecirc;n, chất lượng &acirc;m thanh tai nghe True Wireless vẫn&nbsp;<strong style=\"margin: 0px; padding: 0px;\">kh&ocirc;ng thể cạnh tranh lại&nbsp;</strong>chất lượng &acirc;m thanh của tai nghe c&oacute; d&acirc;y.</p>\r\n<p><img src=\"https://cdn.tgdd.vn/hoi-dap/1201555/tai-nghe-true-wireless-la-gi-uu-nhuoc-diem-the-nao-07-800x528.jpg\" alt=\"Tai nghe True Wireless c&oacute; chất lượng &acirc;m thanh tương đối tốt\" /></p>\r\n<h3 id=\"hmenuid7\" style=\"margin: 0px; padding: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-weight: normal; font-stretch: normal; font-size: 22px; line-height: 37px; font-family: Arial, Helvetica, sans-serif; color: #333333; outline: none;\"><strong style=\"margin: 0px; padding: 0px;\">7. Tai nghe true wireless c&oacute; ảnh hưởng đến sức khoẻ kh&ocirc;ng?</strong></h3>\r\n<p style=\"margin: 10px 0px; padding: 0px; margin-block: 0px; text-rendering: geometricprecision; overflow: hidden; font-size: 18px; line-height: 28px; color: #333333; font-family: Arial, Helvetica, sans-serif;\">Tai nghe True Wireless sử dụng&nbsp;<strong style=\"margin: 0px; padding: 0px;\">s&oacute;ng v&ocirc; tuyến&nbsp;</strong>(loại s&oacute;ng tương tự như s&oacute;ng Wifi) c&oacute; tần số truyền tải&nbsp;<strong style=\"margin: 0px; padding: 0px;\">rất thấp&nbsp;</strong>v&agrave; thấp hơn rất nhiều lần so với s&oacute;ng điện thoại.</p>\r\n<p style=\"margin: 10px 0px; padding: 0px; margin-block: 0px; text-rendering: geometricprecision; overflow: hidden; font-size: 18px; line-height: 28px; color: #333333; font-family: Arial, Helvetica, sans-serif;\">Th&ecirc;m v&agrave;o đ&oacute;, pin tai nghe c&oacute; dung t&iacute;ch kh&aacute; nhỏ v&agrave;&nbsp;<strong style=\"margin: 0px; padding: 0px;\">kh&oacute; g&acirc;y ch&aacute;y nổ&nbsp;</strong>với c&aacute;c IC kiểm so&aacute;t d&ograve;ng điện c&oacute; cường độ thấp. Nh&igrave;n chung, tai nghe True Wireless&nbsp;<strong style=\"margin: 0px; padding: 0px;\">kh&ocirc;ng g&acirc;y ảnh hưởng nguy hiểm</strong>&nbsp;đến sức khỏe người d&ugrave;ng.</p>\r\n<p style=\"margin: 10px 0px; padding: 0px; margin-block: 0px; text-rendering: geometricprecision; overflow: hidden; font-size: 18px; line-height: 28px; color: #333333; font-family: Arial, Helvetica, sans-serif;\"><img src=\"https://cdn.tgdd.vn/hoi-dap/1201555/tai-nghe-true-wireless-la-gi-uu-nhuoc-diem-the-nao-08-800x528.jpg\" alt=\"Tai nghe True Wireless kh&ocirc;ng g&acirc;y ảnh hưởng nguy hiểm đến sức khỏe người d&ugrave;ng\" /></p>\r\n<h3 id=\"hmenuid10\" style=\"margin: 0px; padding: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-weight: normal; font-stretch: normal; font-size: 22px; line-height: 37px; font-family: Arial, Helvetica, sans-serif; color: #333333; outline: none;\"><strong style=\"margin: 0px; padding: 0px;\">10. C&aacute;c d&ograve;ng tai nghe True Wireless nổi tiếng</strong></h3>\r\n<h4 id=\"subhmenuid3\" style=\"margin: 5px 0px 10px; padding: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-weight: normal; font-stretch: normal; font-size: 20px; line-height: 28px; font-family: Arial, Helvetica, sans-serif; color: #333333; outline: none; word-spacing: 0.6px;\"><strong style=\"margin: 0px; padding: 0px;\">Apple AirPods</strong></h4>\r\n<p style=\"margin: 10px 0px; padding: 0px; margin-block: 0px; text-rendering: geometricprecision; overflow: hidden; font-size: 18px; line-height: 28px; color: #333333; font-family: Arial, Helvetica, sans-serif;\">L&agrave; d&ograve;ng tai nghe nổi tiếng đến từ thương hiệu đ&igrave;nh đ&aacute;m -&nbsp;<a style=\"margin: 0px; padding: 0px; text-decoration-line: none; transition: all 0.2s ease 0s; color: #288ad6;\" href=\"https://www.thegioididong.com/phu-kien/apple\" target=\"_blank\" rel=\"noopener\" data-cke-saved-href=\"https://www.thegioididong.com/phu-kien/apple\">Apple</a>. Apple AirPods l&agrave; minh chứng cho cuộc&nbsp;<strong style=\"margin: 0px; padding: 0px;\">c&aacute;ch mạng trải nghiệm &acirc;m thanh</strong>&nbsp;theo xu hướng hiện đại v&agrave; chất lượng. Apple AirPods c&oacute;&nbsp;<strong style=\"margin: 0px; padding: 0px;\">nhiều phi&ecirc;n bản&nbsp;</strong>cho người d&ugrave;ng thỏa sức lựa chọn.</p>\r\n<p style=\"margin: 10px 0px; padding: 0px; margin-block: 0px; text-rendering: geometricprecision; overflow: hidden; font-size: 18px; line-height: 28px; color: #333333; font-family: Arial, Helvetica, sans-serif;\"><img src=\"https://cdn.tgdd.vn/hoi-dap/1201555/tai-nghe-true-wireless-la-gi-uu-nhuoc-diem-the-nao-11-800x477.jpg\" alt=\"Apple AirPods đến từ thương hiệu c&ocirc;ng nghệ nổi tiếng\" /></p>', '2022-06-14 17:23:55');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `categories`
+-- Cấu trúc bảng cho bảng `categories`
 --
 
 CREATE TABLE `categories` (
   `id` int(11) NOT NULL,
   `name` varchar(191) NOT NULL,
   `slug` varchar(191) NOT NULL,
-  `description` mediumtext DEFAULT NULL,
-  `status` tinyint(4) NOT NULL DEFAULT 0,
+  `description` mediumtext,
+  `status` tinyint(4) NOT NULL DEFAULT '0',
   `image` varchar(191) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `categories`
+-- Đang đổ dữ liệu cho bảng `categories`
 --
 
 INSERT INTO `categories` (`id`, `name`, `slug`, `description`, `status`, `image`, `created_at`) VALUES
@@ -75,74 +50,7 @@ INSERT INTO `categories` (`id`, `name`, `slug`, `description`, `status`, `image`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `orders`
---
-
-CREATE TABLE `orders` (
-  `id` bigint(20) NOT NULL,
-  `user_id` int(11) NOT NULL,
-  `status` int(11) NOT NULL DEFAULT 2,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `orders`
---
-
-INSERT INTO `orders` (`id`, `user_id`, `status`, `created_at`) VALUES
-(8, 40, 4, '2022-06-16 17:50:24'),
-(9, 40, 4, '2022-06-17 14:43:39'),
-(10, 46, 3, '2022-06-19 10:02:26'),
-(11, 47, 4, '2022-06-19 10:04:32'),
-(12, 45, 2, '2022-06-19 10:09:18'),
-(13, 44, 2, '2022-06-19 10:13:38');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `order_detail`
---
-
-CREATE TABLE `order_detail` (
-  `id` bigint(20) NOT NULL,
-  `user_id` int(11) NOT NULL,
-  `product_id` int(11) NOT NULL,
-  `order_id` bigint(20) DEFAULT NULL,
-  `selling_price` int(11) NOT NULL,
-  `quantity` int(11) NOT NULL,
-  `status` tinyint(4) NOT NULL DEFAULT 1,
-  `rate` tinyint(4) DEFAULT NULL,
-  `comment` mediumtext DEFAULT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `order_detail`
---
-
-INSERT INTO `order_detail` (`id`, `user_id`, `product_id`, `order_id`, `selling_price`, `quantity`, `status`, `rate`, `comment`, `created_at`) VALUES
-(27, 40, 40, 8, 175, 1, 4, 3, 'cho 3 sao vì thái độ giao hàng của shipper', '2022-06-16 17:49:41'),
-(29, 40, 40, 9, 175, 1, 4, 5, 'giao hàng hơi chậm, nhưng chất lượng khá ok', '2022-06-16 19:04:26'),
-(30, 40, 39, 9, 154, 1, 4, 5, 'Sản phẩm tốt, rất đang mua nhé mọi người', '2022-06-17 14:41:03'),
-(31, 40, 39, NULL, 154, 1, 1, NULL, NULL, '2022-06-17 15:49:09'),
-(32, 46, 40, 10, 175, 1, 3, NULL, NULL, '2022-06-19 10:02:10'),
-(33, 46, 36, 10, 245, 1, 3, NULL, NULL, '2022-06-19 10:02:15'),
-(34, 46, 34, 10, 98, 1, 3, NULL, NULL, '2022-06-19 10:02:22'),
-(35, 47, 34, 11, 98, 2, 4, 5, 'Tai nghe rất tốt nhé mọi người', '2022-06-19 10:04:25'),
-(36, 47, 33, 11, 105, 1, 4, 5, 'Tai nghe tốt, đáng mua nhé mọi người', '2022-06-19 10:04:27'),
-(37, 45, 28, 12, 280, 2, 2, NULL, NULL, '2022-06-19 10:09:02'),
-(38, 45, 25, 12, 210, 1, 2, NULL, NULL, '2022-06-19 10:09:03'),
-(39, 45, 34, 12, 98, 1, 2, NULL, NULL, '2022-06-19 10:09:07'),
-(40, 45, 23, 12, 84, 2, 2, NULL, NULL, '2022-06-19 10:09:10'),
-(41, 44, 34, 13, 98, 1, 2, NULL, NULL, '2022-06-19 10:13:24'),
-(42, 44, 38, 13, 140, 1, 2, NULL, NULL, '2022-06-19 10:13:27'),
-(43, 44, 29, 13, 42, 1, 2, NULL, NULL, '2022-06-19 10:13:29'),
-(44, 44, 30, 13, 77, 2, 2, NULL, NULL, '2022-06-19 10:13:31');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `products`
+-- Cấu trúc bảng cho bảng `products`
 --
 
 CREATE TABLE `products` (
@@ -157,11 +65,11 @@ CREATE TABLE `products` (
   `image` varchar(191) NOT NULL,
   `qty` int(11) NOT NULL,
   `status` tinyint(4) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `products`
+-- Đang đổ dữ liệu cho bảng `products`
 --
 
 INSERT INTO `products` (`id`, `category_id`, `name`, `slug`, `small_description`, `description`, `original_price`, `selling_price`, `image`, `qty`, `status`, `created_at`) VALUES
@@ -192,7 +100,7 @@ INSERT INTO `products` (`id`, `category_id`, `name`, `slug`, `small_description`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Cấu trúc bảng cho bảng `users`
 --
 
 CREATE TABLE `users` (
@@ -202,121 +110,69 @@ CREATE TABLE `users` (
   `phone` varchar(15) NOT NULL,
   `address` varchar(191) DEFAULT NULL,
   `password` varchar(191) NOT NULL,
-  `role_as` tinyint(4) NOT NULL DEFAULT 0,
-  `creat_at` timestamp NOT NULL DEFAULT current_timestamp()
+  `role_as` tinyint(4) NOT NULL DEFAULT '0',
+  `creat_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `users`
+-- Đang đổ dữ liệu cho bảng `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `phone`, `address`, `password`, `role_as`, `creat_at`) VALUES
-(40, 'Trần Kha', 'trankha@gmail.com', '0988269496', 'Số 57 ngõ 22 khuyến lương, Trần Phú, Hoàng Mai, Hà Nội', '$2y$10$BZ8bTD5Sj30H9TIwl3Q2HuZpoIJif2zPYFkQpXphYZp/FQqMh89tO', 1, '2022-06-15 17:56:45'),
-(41, 'Văn Thao1', 'vanthao@gmail.com', '0985625454', 'Số 334 Vĩnh Hưng, Hà Nội', '$2y$10$oUzY5b4qe/kWQwCRcRY26eUkGvf3a5x7vegf09FCWxdmH.4jXkGLG', 0, '2022-06-15 18:14:28'),
-(42, 'kha', 'tranthekha25062000@gmail.com', '0988269496', '500 nguyễn khoái', '$2y$10$82dTilIu2QKxuY/qxHjssefwL/Uvk21lRtxKriUoa205sWIJyAP7.', 0, '2022-06-15 18:29:06'),
-(44, 'Văn Hoàng', 'vanhoang@gmail.com', '0325696542', '10 Ngh. 76/8 Dịch Vọng Hậu, Cầu Giấy, Hà Nội', '$2y$10$0FExz4HQ4KehVdATfRqbRur1i1IIXhbD5fXgZay2Sq6S98w9WvbnW', 0, '2022-06-19 09:58:30'),
-(45, 'Quang Huy', 'quanghuy@gmail.com', '0325684752', '440 Đ. Khương ĐìnhHạ Đình, Thanh Xuân, Hà Nội', '$2y$10$b4bPTCBAdcgn6SqbieUvG.BnI7m.rKEqRQGnnVDZ1oAkJZhfbwVEi', 0, '2022-06-19 09:59:05'),
-(46, 'Thùy Dung', 'thuydung@gmail.com', '0325847569', '334 P. Vĩnh HưngVĩnh Hưng, Hoàng Mai, Hà Nội', '$2y$10$9mc5zDtHX7rTnbbflvvXCed1l6fhXUF63CpmM4J8N5mIvtE7oIn7u', 0, '2022-06-19 09:59:27'),
-(47, 'Nguyễn Hồng', 'nguyenhong@gmail.com', '0986325478', '500 Nguyễn Khoái, Thanh Long, Hai Bà Trưng, Hà Nội', '$2y$10$M.OvNd.hOq.zbctjD3KYrufpycs46LVp73Q57.Xwj/vMxT4KFbxmC', 0, '2022-06-19 10:04:11');
+(40, 'Quản Lý', 'admin@gmail.com', '0988269496', 'Số 57 ngõ 22 khuyến lương, Trần Phú, Hoàng Mai, Hà Nội', '$2y$10$.lpuypbQINYpzeZbXp0x8eE4hC1745w.buODkfXeoRQLk7LXa2Fwu', 1, '2022-06-15 17:56:45'),
+(48, 'Trần Tiến', 'trantien@gmail.com', '09236237543', 'Thôn kiêu sa', '$2y$10$.lpuypbQINYpzeZbXp0x8eE4hC1745w.buODkfXeoRQLk7LXa2Fwu', 0, '2022-10-19 10:57:36');
 
 --
--- Indexes for dumped tables
+-- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Indexes for table `blog`
---
-ALTER TABLE `blog`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `categories`
+-- Chỉ mục cho bảng `categories`
 --
 ALTER TABLE `categories`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `orders`
---
-ALTER TABLE `orders`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `order_detail`
---
-ALTER TABLE `order_detail`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `product_id` (`product_id`),
-  ADD KEY `user_id` (`user_id`),
-  ADD KEY `order_id` (`order_id`);
-
---
--- Indexes for table `products`
+-- Chỉ mục cho bảng `products`
 --
 ALTER TABLE `products`
   ADD PRIMARY KEY (`id`),
   ADD KEY `category_id` (`category_id`);
 
 --
--- Indexes for table `users`
+-- Chỉ mục cho bảng `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT cho các bảng đã đổ
 --
 
 --
--- AUTO_INCREMENT for table `blog`
---
-ALTER TABLE `blog`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
---
--- AUTO_INCREMENT for table `categories`
+-- AUTO_INCREMENT cho bảng `categories`
 --
 ALTER TABLE `categories`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
--- AUTO_INCREMENT for table `orders`
---
-ALTER TABLE `orders`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
-
---
--- AUTO_INCREMENT for table `order_detail`
---
-ALTER TABLE `order_detail`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
-
---
--- AUTO_INCREMENT for table `products`
+-- AUTO_INCREMENT cho bảng `products`
 --
 ALTER TABLE `products`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT cho bảng `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
--- Constraints for dumped tables
+-- Các ràng buộc cho các bảng đã đổ
 --
 
 --
--- Constraints for table `order_detail`
---
-ALTER TABLE `order_detail`
-  ADD CONSTRAINT `order_detail_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`),
-  ADD CONSTRAINT `order_detail_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
-  ADD CONSTRAINT `order_detail_ibfk_3` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`);
-
---
--- Constraints for table `products`
+-- Các ràng buộc cho bảng `products`
 --
 ALTER TABLE `products`
   ADD CONSTRAINT `products_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`);
