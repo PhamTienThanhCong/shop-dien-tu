@@ -21,7 +21,7 @@
                 <div class="col-2 col-md-6 col-sm-12">
                     <div class="contact">
                         <h3 class="contact-header">
-                            COSSOFT
+                            Web
                         </h3>
                         <ul class="contact-socials">
                             <li><a href="#">

@@ -38,6 +38,15 @@ function totalValue($table){
     $totalValue = mysqli_fetch_array($totalValue);
     return $totalValue['number'];
 }
+function getBestSelling($numberGet){
+    global $conn;
+    $query =    "SELECT `products`.*, COUNT(`order_detail`.id) as total_buy FROM `products` 
+                LEFT JOIN `order_detail` ON `products`.`id` = `order_detail`.`product_id`
+                GROUP BY `products`.`id`
+                ORDER BY `total_buy` DESC
+                LIMIT $numberGet";
+    return mysqli_query($conn, $query);
+}
 function getLatestProducts($numberGet,$page = 0,$type = "",$search=""){
     global $conn;
     $page_extra = $numberGet * $page;
@@ -58,19 +67,21 @@ function getLatestProducts($numberGet,$page = 0,$type = "",$search=""){
     
     return mysqli_query($conn, $query);
 }
-function getBlogs($page, $keyWold){
-    global $conn;
-    $page_extra = 10 * $page;
-    $query =    "SELECT * FROM `blog` 
-                WHERE `title` LIKE '%$keyWold%'
-                ORDER BY `id` DESC
-                LIMIT 10 OFFSET $page_extra";
-    return mysqli_query($conn, $query);
-}
 
 // order
 function checkOrder($id_product){
-    return 0;
+    global $conn;
+    $user_id = $_SESSION['auth_user']['id'];   
+    $query  =   "SELECT `status` FROM `order_detail` 
+                WHERE `product_id` = '$id_product' AND `user_id` = '$user_id' AND `status` != 0 
+                ORDER BY `status`";
+    $checkOrsder = mysqli_query($conn, $query);
+    if(mysqli_num_rows($checkOrsder)){
+        $checkOrsder = mysqli_fetch_array($checkOrsder)['status'];
+        return $checkOrsder;
+    }else{
+        return 0;
+    }
 }
 
 function getMyOrders(){
@@ -111,7 +122,11 @@ function getRate($product_id){
 }
 
 function avgRate($product_id){
-    return 4.5;
+    global $conn;
+    $query = "SELECT AVG(`rate`) as `avg_rate` FROM `order_detail` WHERE `product_id` = '$product_id' AND `status` = 4 AND `rate` > 0";
+    $rate = mysqli_query($conn, $query);
+    $rate = mysqli_fetch_array($rate);
+    return round($rate['avg_rate'],1);
 }
 
 function redirect($url, $message)

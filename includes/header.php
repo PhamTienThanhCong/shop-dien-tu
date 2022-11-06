@@ -18,7 +18,7 @@ $page = $page - 1;
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cossoft</title>
+    <title>Shop Điện Tử</title>
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap" rel="stylesheet">
@@ -34,7 +34,7 @@ $page = $page - 1;
     
      <!-- mobile menu -->
      <div class="mobile-menu bg-second">
-            <a href="#" class="mb-logo">COSSOFT</a>
+            <a href="#" class="mb-logo">Shop Điện Tử</a>
             <span class="mb-menu-toggle" id="mb-menu-toggle">
                 <i class='bx bx-menu'></i>
             </span>
@@ -62,7 +62,7 @@ $page = $page - 1;
             <!-- mid header -->
             <div class="bg-main">
                 <div class="mid-header container">
-                    <a href="index.php" class="logo">COSSOFT</a>
+                    <a href="index.php" class="logo">Shop điện tử</a>
                     <?php if (!isset($type_post)) { ?>
                         <form class="search" method="get" action="./products.php">
                     <?php } else { ?>
@@ -91,7 +91,7 @@ $page = $page - 1;
                                                     <h3>Xin chào <?= $_SESSION['auth_user']['name'] ?>!</h3>
                                                         <ul>   
                                                             <li><a href="user-profile.php">Trang cá nhân</a></li>
-                                                            <li><a href="#">Đơn hàng</a></li>
+                                                            <li><a href="cart-status.php">Đơn hàng</a></li>
                                                             <li><a href="logout.php">Đăng Xuất</a></li>        
                                                         </ul>
                                                 </div>                                          
@@ -119,7 +119,7 @@ $page = $page - 1;
                             <?php
                             }
                             ?>
-                        <li><a href="#"><i class='bx bx-cart'></i></a></li>
+                        <li><a href="cart.php"><i class='bx bx-cart'></i></a></li>
                     </ul>
                 </div>
             </div>

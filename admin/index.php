@@ -50,7 +50,7 @@ include ("../admin/includes/header.php");
                     </div>
                     <div class="text-end pt-1">
                         <p class="text-sm mb-0 text-capitalize">Total order</p>
-                        <h4 class="mb-0">100</h4>
+                        <h4 class="mb-0"><?= totalValue('orders') ?></h4>
                     </div>
                     </div>
                     <hr class="dark horizontal my-0">
@@ -67,7 +67,7 @@ include ("../admin/includes/header.php");
                     </div>
                     <div class="text-end pt-1">
                         <p class="text-sm mb-0 text-capitalize">Sales</p>
-                        <h4 class="mb-0">$ 500</h4>
+                        <h4 class="mb-0">$<?= totalPriceGet() ?></h4>
                     </div>
                     </div>
                     <hr class="dark horizontal my-0">

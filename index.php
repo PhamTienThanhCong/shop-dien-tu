@@ -1,9 +1,8 @@
 <?php 
 include("./includes/header.php");
 
-$bestSellingProducts    =   getLatestProducts(8);
+$bestSellingProducts    =   getBestSelling(8);
 $LatestProducts         =   getLatestProducts(8);
-$blogs                  =   getBlogs($page, $search);
 ?>
 <body>
    <!-- hero section -->
@@ -214,7 +213,7 @@ $blogs                  =   getBlogs($page, $search);
     </div>
     <!-- end product list -->
 
-    <!-- footer -->
+
     <?php include("./includes/footer.php") ?>
     <script src="./assets/js/app.js"></script>
     <script src="./assets/js/index.js"></script>
